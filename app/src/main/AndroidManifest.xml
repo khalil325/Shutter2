@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.shutter2">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="Shutter"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Shutter2">
+        <activity android:name=".editor"/>
+        <activity android:name=".MainActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.dsphotoeditor.sdk.activity.DsPhotoEditorActivity" />
+        <activity android:name="com.dsphotoeditor.sdk.activity.DsPhotoEditorStickerActivity" />
+        <activity
+            android:name="com.dsphotoeditor.sdk.activity.DsPhotoEditorTextActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name="com.dsphotoeditor.sdk.activity.DsPhotoEditorCropActivity" />
+        <activity android:name="com.dsphotoeditor.sdk.activity.DsPhotoEditorDrawActivity" />
+    </application>
+
+</manifest>

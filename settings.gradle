@@ -1,0 +1,2 @@
+rootProject.name = "Shutter2"
+include ':app'
